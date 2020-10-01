@@ -14,7 +14,16 @@ const TagDetail = {
     Overseas registered optometrist.<br /><br />
     Enthusiastic in web and mobile applications.<br /><br />
     Proactively seeking and building projects.<br /><br />
-    Interested in creative application design for better user experience.`
+    Interested in creative application design for better user experience.<br /><br />
+    <a href="https://www.linkedin.com/in/hymo/" target="_blank" rel="noopener noreferer">
+      <i class="fab fa-linkedin fa-3x"></i>
+    </a>&nbsp;
+    <a href="https://twitter.com/moklavie/" target="_blank" rel="noopener noreferer">
+      <i class="fab fa-twitter-square fa-3x"></i>
+    </a>&nbsp;
+    <a href="mailto:hoiyan.mo@utas.edu.au" target="_blank" rel="noopener noreferer">
+      <i class="fas fa-envelope-square fa-3x"></i>
+    </a>`
   },
 
   education: {

@@ -78,8 +78,11 @@
 
 a span {
   color: white;
-  text-decoration: underline;
   background-color: #53a9ff;
+}
+
+a i {
+  color: #000;
 }
 
 /*=====================================
