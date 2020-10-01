@@ -1,55 +1,58 @@
-.container {
-  display: grid;
-  grid-template-rows: 0% auto auto auto auto 0%;
-  background-image: url('../img/bg.jpg');
-  overflow: hidden;
-}
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-rows: 0% auto auto auto auto 0%;
+    background-image: url('../img/bg.jpg');
+    overflow: hidden;
+  }
 
-.tag {
-  width: 100vw;
-  height: 100%;
-  position: relative;
-  z-index: 0;
-  border: solid 0.8px white;
-}
+  .tag {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    border: solid 0.8px white;
+  }
 
-.tagImg {
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0.65;
-  object-fit: cover;
-}
+  .tagImg {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.65;
+    object-fit: cover;
+  }
 
-.tagTitle {
-  position: relative;
-  color: white;
-  text-shadow: -10px 1px 6px #808080;
-  font-size: 3rem;
-  z-index: 2;
-}
+  .tagTitle {
+    position: relative;
+    color: white;
+    text-shadow: -10px 1px 6px #808080;
+    font-size: 3rem;
+    z-index: 2;
+  }
 
-.tagSummary {
-  display: none;
-  position: relative;
-  top: 15%;
-  padding: 20px;
-  line-height: 1.5;
-  text-align: justify;
-  background-color: rgba(198, 198, 198, 0.72);
-  z-index: 2;
-}
+  .tagSummary {
+    display: none;
+    position: relative;
+    top: 15%;
+    padding: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    background-color: rgba(198, 198, 198, 0.72);
+    z-index: 2;
+  }
 
-.currentTag {
-  height: 100vh;
-}
+  .currentTag {
+    height: 100vh;
+  }
 
-.currentTagImg {
-  object-fit: cover;
-  height: 100vh!important;
+  .currentTagImg {
+    object-fit: cover;
+    height: 100vh!important;
+  }
+
 }
 
 .currentTitle {
@@ -82,7 +85,7 @@ a span {
 /*=====================================
 Desktop
 =====================================*/
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .container {
     display: grid;
     grid-template-columns: minmax(8%, 10%) 1fr 1fr 1fr 1fr minmax(8%, 10%);
