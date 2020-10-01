@@ -22,7 +22,7 @@ const setSummary = (summaryID, summary) => {
   let summaryImg = thisSummary.querySelectorAll('img');
   if(typeof summaryImg !== 'undefined') summaryImg.forEach(i => i.style.width = '48px');
   if(window.screen.width <= 768 && thisSummary.previousElementSibling.innerText === 'Projects') {
-    thisSummary.innerHTML = '---Long press to open links---<br \><br \>' + thisSummary.innerHTML;
+    thisSummary.innerHTML = '---Long press to open links---<br><br>' + thisSummary.innerHTML;
   }
 }
 

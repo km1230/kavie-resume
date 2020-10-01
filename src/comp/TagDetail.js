@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from 'react';
 import profile from '../static/img/profile.jpg';
 import utas from '../static/img/utas.jpg';

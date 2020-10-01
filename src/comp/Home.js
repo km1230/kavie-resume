@@ -3,6 +3,7 @@ import Tag from './Tag';
 import TagDetail from './TagDetail';
 
 const Home = (props) => {
+  // eslint-disable-next-line
   const [tags, setTags] = useState(TagDetail);
 
   useEffect(() => {
