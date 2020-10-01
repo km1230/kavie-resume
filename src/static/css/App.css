@@ -1,0 +1,141 @@
+.container {
+  display: grid;
+  grid-template-rows: 0% auto auto auto auto 0%;
+  background-image: url('../img/bg.jpg');
+  overflow: hidden;
+}
+
+.tag {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  border: solid 0.8px white;
+}
+
+.tagImg {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.65;
+  object-fit: cover;
+}
+
+.tagTitle {
+  position: relative;
+  color: white;
+  text-shadow: -10px 1px 6px #808080;
+  font-size: 3rem;
+  z-index: 2;
+}
+
+.tagSummary {
+  display: none;
+  position: relative;
+  top: 15%;
+  padding: 20px;
+  line-height: 1.5;
+  text-align: justify;
+  background-color: rgba(198, 198, 198, 0.72);
+  z-index: 2;
+}
+
+.currentTag {
+  height: 100vh;
+}
+
+.currentTagImg {
+  object-fit: cover;
+  height: 100vh!important;
+}
+
+.currentTitle {
+  display: none
+}
+
+.currentSummary {
+  display: block!important;
+  z-index: 3;
+}
+
+.reloadBtn {
+  display: none;
+  padding: 20px;
+  background-color: #000;
+  color: white;
+  font-size: 2rem;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+a span {
+  color: white;
+  text-decoration: underline;
+  background-color: #53a9ff;
+}
+
+/*=====================================
+Desktop
+=====================================*/
+@media only screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(8%, 10%) 1fr 1fr 1fr 1fr minmax(8%, 10%);
+    background-image: url('../img/bg.jpg');
+    overflow: hidden;
+  }
+
+  .tag {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .tagImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0.65;
+  }
+
+  .tagTitle {
+    color: white;
+    text-shadow: -10px 1px 6px #808080;
+    font-size: 3rem;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    bottom: 0px;
+    position: absolute;
+    opacity: 1!important;
+    z-index: 2;
+  }
+
+  .tagSummary {
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+    line-height: 1.5;
+    display: none;
+    text-align: justify;
+    top: 25vh;
+    background-color: rgba(198, 198, 198, 0.72);
+  }
+
+  .currentTag {
+    width: 60vw;
+  }
+
+  .currentTagImg {
+    object-fit: cover;
+    height: 100vh!important;
+  }
+
+}
