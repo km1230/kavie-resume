@@ -2,7 +2,7 @@
 import React from 'react';
 import profile from '../static/img/profile.jpg';
 import airport from '../static/img/airport.jpg';
-import utas from '../static/img/utas.jpg';
+import dock from '../static/img/dock.jpg';
 import work from '../static/img/work.jpg';
 import project from '../static/img/project.jpg';
 import mobile_app from '../static/img/mobile_app.jpg';
@@ -42,7 +42,7 @@ const TagDetail = {
   },
 
   education: {
-    img: utas,
+    img: dock,
     alt: 'education background',
     title: 'Education',
     summary: `<span style="font-weight: bold">[2018 Feb - 2020 Jan]</span><br />

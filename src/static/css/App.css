@@ -5,7 +5,7 @@ Mobile
   .container {
     display: grid;
     grid-template-rows: 0% auto auto auto auto auto 0%;
-    background-image: url('../img/bg.jpg');
+    background-color: #d9d9d9;
     overflow: hidden;
   }
 
@@ -24,7 +24,7 @@ Mobile
     top: 0;
     left: 0;
     z-index: 1;
-    opacity: 0.65;
+    opacity: 0.85;
     object-fit: cover;
   }
 
@@ -69,7 +69,7 @@ Desktop
   .container {
     display: grid;
     grid-template-columns: minmax(8%, 10%) 1fr 1fr 1fr 1fr 1fr minmax(8%, 10%);
-    background-image: url('../img/bg.jpg');
+    background-color: #d9d9d9;
     overflow: hidden;
   }
 
@@ -86,7 +86,7 @@ Desktop
     left: 0;
     top: 0;
     z-index: 1;
-    opacity: 0.65;
+    opacity: 0.85;
   }
 
   .tagTitle {
@@ -118,7 +118,7 @@ Desktop
   }
 
   .currentTagImg {
-    object-fit: cover;
+    object-fit: fill;
     height: 100vh!important;
   }
 
