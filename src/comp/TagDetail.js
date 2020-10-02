@@ -4,6 +4,7 @@ import profile from '../static/img/profile.jpg';
 import utas from '../static/img/utas.jpg';
 import work from '../static/img/work.jpg';
 import project from '../static/img/project.jpg';
+import mobile_app from '../static/img/mobile_app.jpg'
 
 const TagDetail = {
   profile: {
@@ -70,7 +71,7 @@ const TagDetail = {
 
     <a href="https://devjunior.com/" target="_blank" rel="nopener" noreferrer">
       <img src="https://devjunior.s3.amazonaws.com/static/img/favicon.png" />
-      <span>Personal Blog</span>
+      <span>Personal Blog - DevJunior.com</span>
     </a><br />
     Python, Django, Bootstrap<br /><br />
 
@@ -80,7 +81,11 @@ const TagDetail = {
     </a><br />
     Public projects only<br /><br />
 
-    <span style="font-weight: bold">...More upon request</span>`
+    <img src=${mobile_app} />
+    <span>Cross-platform mobile application</span><br />
+    React Native, [content protected by law]<br /><br />
+
+    <span style="font-weight: bold">...More detail upon request</span>`
   }
 }
 
