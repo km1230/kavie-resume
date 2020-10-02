@@ -1,10 +1,11 @@
 // eslint-disable-next-line
 import React from 'react';
 import profile from '../static/img/profile.jpg';
+import airport from '../static/img/airport.jpg';
 import utas from '../static/img/utas.jpg';
 import work from '../static/img/work.jpg';
 import project from '../static/img/project.jpg';
-import mobile_app from '../static/img/mobile_app.jpg'
+import mobile_app from '../static/img/mobile_app.jpg';
 
 const TagDetail = {
   profile: {
@@ -25,6 +26,19 @@ const TagDetail = {
     <a href="mailto:hoiyan.mo@utas.edu.au" target="_blank" rel="noopener noreferer">
       <i class="fas fa-envelope-square fa-3x"></i>
     </a>`
+  },
+
+  skills: {
+    img: airport,
+    alt: 'skills background',
+    title: 'Skills',
+    summary: `<i class="fas fa-dumbbell"></i> Time management at fast pace working environment<br /><br />
+    <i class="fas fa-dumbbell"></i> Proactive to learn and participate in IT projects. Trying to take AWS cloud practitioner exam, and learning basic cybersecurity.<br /><br />
+    <i class="fas fa-dumbbell"></i> Keep learning and practice modern frameworks such as Flask, Django, Nodejs, Express, React.<br /><br />
+    <i class="fas fa-dumbbell"></i> Enjoy solving problems and helping people with the use of technology.<br /><br />
+    <i class="fas fa-dumbbell"></i> Building websites to web applications. Still have great passion even over 15years.<br/><br />
+    <i class="fas fa-dumbbell"></i> Love to study how others make interactive web designs. Highly prefer responsive design as the basic in every web development.<br /><br />
+    <i class="fas fa-dumbbell"></i> Experience in PHP, JS ES6+, Nodejs, Reactjs/React Native, Python, Django, CSS, Bootstrap.<br /><br />`
   },
 
   education: {
@@ -63,8 +77,8 @@ const TagDetail = {
     title: 'Projects',
     summary: `
     <a href="https://utashksa.herokuapp.com/" target="_blank" rel="nopener noreferrer">
-      <img src="https://utashksa.herokuapp.com/favicon.ico" /><br />
-      <span>UTAS Hong Kong Student Association Web App</span>
+      <img src="https://utashksa.herokuapp.com/favicon.ico" />
+      <span>UTAS HKSA Web App</span>
     </a><br />
     Membership management system, CRUD posts, Bulk email system<br />
     Nodejs, Reactjs, Bootstrap, CSS<br /><br />

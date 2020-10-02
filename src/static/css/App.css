@@ -4,7 +4,7 @@ Mobile
 @media (max-width: 768px) {
   .container {
     display: grid;
-    grid-template-rows: 0% auto auto auto auto 0%;
+    grid-template-rows: 0% auto auto auto auto auto 0%;
     background-image: url('../img/bg.jpg');
     overflow: hidden;
   }
@@ -39,8 +39,12 @@ Mobile
   .tagSummary {
     display: none;
     position: relative;
-    top: 15%;
+    top: 0;
+    max-height: 98%;
+    width: 90%;
     padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
     line-height: 1.5;
     text-align: justify;
     background-color: rgba(198, 198, 198, 0.72);
@@ -64,7 +68,7 @@ Desktop
 @media (min-width: 768px) {
   .container {
     display: grid;
-    grid-template-columns: minmax(8%, 10%) 1fr 1fr 1fr 1fr minmax(8%, 10%);
+    grid-template-columns: minmax(8%, 10%) 1fr 1fr 1fr 1fr 1fr minmax(8%, 10%);
     background-image: url('../img/bg.jpg');
     overflow: hidden;
   }
@@ -102,9 +106,10 @@ Desktop
     position: relative;
     padding: 20px;
     line-height: 1.5;
+    max-height: 90%;
+    top: 5px;
     display: none;
     text-align: justify;
-    top: 25vh;
     background-color: rgba(198, 198, 198, 0.72);
   }
 
@@ -136,8 +141,9 @@ Common
   padding: 20px;
   background-color: #000;
   color: white;
+  opacity: 0.6;
   font-size: 2rem;
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   right: 0;
   bottom: 0;
