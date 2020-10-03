@@ -8,11 +8,18 @@ const Home = (props) => {
 
   useEffect(() => {
     let tags = document.querySelectorAll('.tag');
+    let sides = document.querySelectorAll('.side');
     let reloadBtns = document.querySelectorAll('.reloadBtn');
 
     tags.forEach(t => {
       t.addEventListener('mouseover', () => addCurrent(t));
       t.addEventListener('mouseout', () => removeCurrent(t));
+    });
+
+    sides.forEach(s => {
+      s.addEventListener('click', () => 
+        tags.forEach(t => removeCurrent(t))
+      )
     });
 
     reloadBtns.forEach(r => {

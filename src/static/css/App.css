@@ -1,7 +1,7 @@
 /*=====================================
 Mobile
 =====================================*/
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .container {
     display: grid;
     grid-template-rows: 0% auto auto auto auto auto 0%;
@@ -65,7 +65,7 @@ Mobile
 /*=====================================
 Desktop
 =====================================*/
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .container {
     display: grid;
     grid-template-columns: minmax(8%, 10%) 1fr 1fr 1fr 1fr 1fr minmax(8%, 10%);
