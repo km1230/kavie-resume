@@ -1,16 +1,47 @@
+// Module
 import React from 'react';
-import '../static/css/App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Home from './Home';
+// Components
+import Menu from './Menu';
+import Profile from './Profile';
+import Education from './Education';
+import Skills from './Skills';
+import Projects from './Projects';
+import Work from './Work';
+// Style
+import '../static/css/App.css';
 
 const App = () => {
+  const zIndex = () => {
+    if(window.innerWidth >= 768) {
+
+      let sections = document.querySelectorAll('.section');
+      let current = document.querySelector('.nav').value;
+      sections.forEach(s => {
+        if(s.id == current) {
+          s.classList.remove('d-none');
+          window.location.href = `./#${current}`
+        } else {
+          s.classList.add('d-none')
+        }
+      })
+    }
+  }
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Switch>
-          <Route path='/' component={Home} />
-        </Switch>
-      </BrowserRouter>
+    <div className="App" onLoad={() => zIndex()}>
+      <Menu zIndex={zIndex} />
+
+      <div className='main col-12 mt-5'>
+        <div className='row'>
+          <Profile />
+          <Education />
+          <Skills />
+          <Projects />
+          <Work />
+        </div>
+      </div>
+
     </div>
   );
 }
