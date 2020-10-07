@@ -6,7 +6,7 @@ const Skills = () => {
       <div className='container'>
         <h2 className='sectionTitle'>- Skills</h2>
         <div className='row justify-content-around'>
-          <div className='col-12 col-md-4 skillsModal mb-3'>
+          <div className='col-12 col-md-5 skillsModal mb-3'>
             <ul>
               <li>HTML, CSS, Bootstrap</li>
               <li>JavaScript ES6, Php, Python</li>
@@ -15,7 +15,7 @@ const Skills = () => {
               <li>Web app, mobile app, responsive design</li>
             </ul>
           </div>
-          <div className='col-12 col-md-4 skillsModal mb-3'>
+          <div className='col-12 col-md-5 skillsModal mb-3'>
             <ul>
               <li>Time Management</li>
               <li>Proactive to learn</li>
