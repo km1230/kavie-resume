@@ -18,11 +18,15 @@ const App = () => {
       let sections = document.querySelectorAll('.section');
       let current = document.querySelector('.nav').value;
       sections.forEach(s => {
+        s.style.position = 'absolute';
+        s.style.top = 0;
+        s.style.left = 0;        
+
         if(s.id == current) {
-          s.classList.remove('d-none');
+          s.style.transform = 'translate(0, 0)';
           window.location.href = `./#${current}`
         } else {
-          s.classList.add('d-none')
+          s.style.transform = 'translate(-100%, 0)';
         }
       })
     }

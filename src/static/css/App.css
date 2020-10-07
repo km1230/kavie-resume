@@ -45,6 +45,7 @@ a:hover {
   font-size: 1.5em;
   font-weight: bold;
   padding: 20px;
+  transition: all 0.3s ease;
 }
 
 .sectionTitle {
