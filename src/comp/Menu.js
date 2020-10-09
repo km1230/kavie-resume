@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Menu = (props) => {
   const handleSelect = () => {
+    let current = document.querySelector('.nav').value;
     if(window.innerWidth < 768) {
-      let selection = document.querySelector('.nav').value;
-      window.location.href = `./#${selection}`;
+      window.location.href = `./#${current}`;
     } else {
-      props.zIndex()
+      props.translate();
     }
   }
 

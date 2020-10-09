@@ -3,9 +3,10 @@ import Utashksa from '../static/img/utashksa.png';
 import Devjunior from '../static/img/devjunior.png';
 import MobileApp from '../static/img/mobile_app.jpg';
 
-const Projects = () => {
+const Projects = (props) => {
   return (
     <div className='section projects col-12 row pt-5 pb-5' id='3'>
+      { (window.innerWidth >= 768) ? props.showSVG() : '' }
       <div className='container'>
         <h2 className='sectionTitle'>- Projects</h2>
 

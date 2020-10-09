@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div className='section profile col-12 row pt-5 pb-5' id='0'>
-
+      { (window.innerWidth >= 768) ? props.showSVG() : '' }
       <div className='container'>
-        <h2 className='sectionTitle'>- Profile</h2>
+        <h2 className='sectionTitle'>- Profile -</h2>
         <p>
           Hoi Yan Kavie Mo. A recent Master in IT graduate from UTAS.<br /><br />
           Overseas registered optometrist.<br /><br />
@@ -25,7 +25,6 @@ const Profile = () => {
           </a>
         </div>
       </div>
-
     </div>
   )
 }

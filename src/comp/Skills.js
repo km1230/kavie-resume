@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Skills = () => {
+const Skills = (props) => {
   return (
     <div className='section skills col-12 row pt-5 pb-5' id='2'>
+      { (window.innerWidth >= 768) ? props.showSVG() : '' }
       <div className='container'>
         <h2 className='sectionTitle'>- Skills</h2>
         <div className='row justify-content-around'>

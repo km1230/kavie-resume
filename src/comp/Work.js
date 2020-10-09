@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Work = () => {
+const Work = (props) => {
   return (
     <div className='section work col-12 row pt-5 pb-5' id='4'>
+      { (window.innerWidth >= 768) ? props.showSVG() : '' }
       <div className='container'>
         <h2 className='sectionTitle'>- Working Exp</h2>
 

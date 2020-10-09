@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Education = () => {
+const Education = (props) => {
   return (
     <div className='section education col-12 row pt-5 pb-5' id='1'>
+      { (window.innerWidth >= 768) ? props.showSVG() : '' }
       <div className='container'>
         <h2 className='sectionTitle'>- Education</h2>
         <div className='col-12 p-5'>
