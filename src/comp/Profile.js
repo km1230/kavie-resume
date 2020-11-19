@@ -8,7 +8,7 @@ const Profile = (props) => {
       <div className='container'>
         <h2 className='sectionTitle'>- Profile -</h2>
         <p>
-          Hoi Yan Kavie Mo. A recent Master in IT graduate from UTAS.<br /><br />
+          Kavie Mo. A recent Master in IT graduate from UTAS.<br /><br />
           Overseas registered optometrist.<br /><br />
           Enthusiastic in web and mobile applications.<br /><br />
           Proactively seeking and building projects.<br /><br />
