@@ -5,10 +5,11 @@ import MobileApp from '../static/img/mobile_app.jpg';
 
 const Projects = (props) => {
   return (
-    <div className='section projects col-12 row pt-5 pb-5' id='3'>
+    <div className='section projects col-12 row pt-5 pb-5' id='2'>
+      <span className="anchor" id='anchor2'></span>
       { (window.innerWidth >= 768) ? props.showSVG() : '' }
       <div className='container'>
-        <h2 className='sectionTitle'>- Projects</h2>
+        <h2 className='sectionTitle'>- Projects -</h2>
 
         <div className='projectBox'>
           <a href="https://utashksa.herokuapp.com/" className='mr-3' target="_blank" rel="noopener noreferrer">

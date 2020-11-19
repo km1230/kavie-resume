@@ -3,6 +3,7 @@ import React from 'react';
 const Profile = (props) => {
   return (
     <div className='section profile col-12 row pt-5 pb-5' id='0'>
+      <span className="anchor" id='anchor0'></span>
       { (window.innerWidth >= 768) ? props.showSVG() : '' }
       <div className='container'>
         <h2 className='sectionTitle'>- Profile -</h2>
