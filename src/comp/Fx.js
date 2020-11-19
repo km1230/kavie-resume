@@ -5,35 +5,38 @@ import Line from './Line';
 
 //Randomise Circle and Line
 const positionSVG = (s) => {
-    //Circle
-    let circleTop = Math.random() * s.clientHeight;
-    let circleLeft = Math.random() * s.clientWidth;
-    let circleSVG = document.querySelectorAll('.circleSVG')[s.id];
-    let circle = circleSVG.firstChild;
-    circleSVG.style.width = s.offsetWidth;
-    circleSVG.style.height = s.offsetHeight;
-    circleSVG.style.position = 'fixed';
+    let circleSVG = document.querySelectorAll('.circleSVG')[s.id];        
+    let lineSVG = document.querySelectorAll('.lineSVG')[s.id];
+    let circle = circleSVG.firstChild;    
+    let line = lineSVG.firstChild;
+
+    //-- location
+    circleSVG.style.position = 'absolute';
+    circleSVG.style.height = window.innerHeight;
+    circleSVG.style.width = window.innerWidth;
+    lineSVG.style.position = 'absolute';
+    lineSVG.style.height = window.innerHeight;
+    lineSVG.style.width = window.innerWidth;
+    lineSVG.style.transform = `rotate(${Math.random() * 360}deg)`;
+    let circleTop = Math.random() * window.innerHeight;
+    let circleLeft = Math.random() * window.innerWidth;   
+    let lineTop = Math.random() * window.innerHeight;
+    let lineLeft = Math.random() * window.innerWidth;
+
+    //--circle dimension
     circle.setAttribute("cx", circleLeft);
     circle.setAttribute("cy", circleTop);
     circle.setAttribute(
         "r",
-        (s.clientHeight > s.clientWidth) ? Math.random() * s.clientWidth * 0.5 + 1 : Math.random() * s.clientHeight * 0.5 + 1
+        Math.random() * Number(circleSVG.style.width.replace('px', '')) * 0.5 + 1
     );
 
-    //Line
-    let lineTop = Math.random() * s.clientHeight;
-    let lineLeft = Math.random() * s.clientWidth;
-    let length = (s.clientHeight > s.clientWidth) ? s.clientWidth * Math.random() + 1 : s.clientHeight * Math.random() + 1;
-    let lineSVG = document.querySelectorAll('.lineSVG')[s.id];
-    let line = lineSVG.firstChild;
-    lineSVG.style.width = s.offsetWidth;
-    lineSVG.style.height = s.offsetHeight;
-    lineSVG.style.position = 'fixed';
+    //--line dimension
+    let length = window.innerHeight * Math.random() + 1;    
     line.setAttribute('x1', lineLeft);
     line.setAttribute('y1', lineTop);
     line.setAttribute('x2', lineLeft + length);
-    line.setAttribute('y2', lineTop + length);
-    lineSVG.style.transform = `rotate(${Math.random() * 360}deg)`;
+    line.setAttribute('y2', lineTop + length);    
 };
 
 const translate = () => {
@@ -85,7 +88,7 @@ const scrollHandler = () => {
 //Display Circle & Line
 const showSVG = () => {
     return (
-        <div>
+        <div className="svg">
             <Circle />
             <Line />
         </div>
