@@ -51,7 +51,9 @@ const translate = () => {
             s.style.top = 0;
             s.style.left = 0;
             s.style.height = '100vh';
+        });
 
+        sections.forEach(s => {
             if (s.id === current) {
                 s.style.transform = 'translate(0, 80px)';
                 positionSVG(s);
@@ -59,7 +61,8 @@ const translate = () => {
             } else {
                 s.style.transform = 'translate(-100%, 0)';
             }
-        });
+        })
+
     } else {
         let anchors = document.querySelectorAll('.anchor');
         anchors.forEach(a => {
@@ -69,12 +72,14 @@ const translate = () => {
 };
 
 const scrollHandler = () => {
-    let sections = document.querySelectorAll('.section');
-    let selector = document.querySelector('.nav');
-    sections.forEach(s => {
-        let rect = s.getBoundingClientRect();
-        if(window.innerHeight - rect.top > window.innerHeight / 2) selector.value = s.id;
-    });
+    if (window.innerWidth < 768) {
+        let sections = document.querySelectorAll('.section');
+        let selector = document.querySelector('.nav');
+        sections.forEach(s => {
+            let rect = s.getBoundingClientRect();
+            if (window.innerHeight - rect.top > window.innerHeight / 2) selector.value = s.id;
+        });
+    }
 }
 
 //Display Circle & Line

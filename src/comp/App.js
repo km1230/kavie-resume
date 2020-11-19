@@ -1,5 +1,5 @@
 // Module
-import React from 'react';
+import React, { useEffect } from 'react';
 // Components
 import { translate, scrollHandler, showSVG } from './Fx';
 import Menu from './Menu';
@@ -12,9 +12,12 @@ import Work from './Work';
 import '../static/css/App.css';
 
 const App = () => {
+  useEffect(() => {
+    translate();
+  });
 
   return (
-    <div className="App" onLoad={() => translate()}  onScroll={() => scrollHandler()}>
+    <div className="App" onScroll={() => scrollHandler()}>
       <Menu translate={translate} />
 
       <div className='main col-12 mt-5'>
