@@ -42,10 +42,10 @@ const positionSVG = (s) => {
 const translate = () => {
     let sections = document.querySelectorAll('.section');
     let current = document.querySelector('.nav').value;
+    let App = document.querySelector('.App');
 
     if (window.innerWidth >= 768) {
         //Prevent overflow-Y
-        let App = document.querySelector('.App');
         App.style.overflowY = 'hidden';
 
         //Translate Effect for each section
@@ -54,9 +54,7 @@ const translate = () => {
             s.style.top = 0;
             s.style.left = 0;
             s.style.height = '100vh';
-        });
 
-        sections.forEach(s => {
             if (s.id === current) {
                 s.style.transform = 'translate(0, 80px)';
                 positionSVG(s);
@@ -64,9 +62,10 @@ const translate = () => {
             } else {
                 s.style.transform = 'translate(-100%, 0)';
             }
-        })
+        });
 
     } else {
+        App.style.overflowY = 'scroll';
         let anchors = document.querySelectorAll('.anchor');
         anchors.forEach(a => {
             a.style.display = 'block'
@@ -75,7 +74,7 @@ const translate = () => {
 };
 
 const scrollHandler = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 768) {        
         let sections = document.querySelectorAll('.section');
         let selector = document.querySelector('.nav');
         sections.forEach(s => {

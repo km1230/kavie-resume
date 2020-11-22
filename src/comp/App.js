@@ -12,12 +12,16 @@ import Work from './Work';
 import '../static/css/App.css';
 
 const App = () => {
-  useEffect(() => {
-    translate();
+  useEffect(() => {   
+    translate();  
+    window.addEventListener(
+      'resize',
+      () => (window.location.href = '../')
+    );
   });
 
   return (
-    <div className="App" onScroll={() => scrollHandler()}>
+    <div className="App" onScroll={scrollHandler}>
       <Menu translate={translate} />
 
       <div className='main col-12 mt-5'>
